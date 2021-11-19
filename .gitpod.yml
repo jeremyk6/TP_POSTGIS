@@ -4,9 +4,7 @@ tasks:
       sudo tar xvf rootfs.tar.gz
       rm -rf rootfs.tar.gz
       sudo mkdir rootfs/TP_POSTGIS
-      gp sync-done init
     command : |
-      gp sync-await init
       sudo mount -t sysfs /sys rootfs/sys
       sudo mount -t proc /proc rootfs/proc
       sudo mount -R /dev rootfs/dev
