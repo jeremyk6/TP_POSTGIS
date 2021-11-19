@@ -5,6 +5,7 @@ tasks:
       rm -rf rootfs.tar.gz
       sudo mkdir rootfs/TP_POSTGIS
       gp sync-done init
+      exit
   - command : |
       gp sync-await init
       sudo mount -t sysfs /sys rootfs/sys
@@ -14,6 +15,7 @@ tasks:
       sudo mount --bind TP_POSTGIS rootfs/TP_POSTGIS
       sudo chroot rootfs /bin/bash -c "su - -c /root/.start.sh"
       echo "sudo chroot /workspace/TP_POSTGIS/rootfs" > ~/.bashrc
+      exit
 
 ports :
   - port: 8080
