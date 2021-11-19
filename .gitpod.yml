@@ -1,7 +1,7 @@
 tasks:
   - init : |
       wget https://github.com/jeremyk6/TP_POSTGIS/releases/download/rootfs/rootfs.tar.gz
-      tar xvf rootfs.tar.gz
+      sudo tar xvf rootfs.tar.gz
       rm -rf rootfs.tar.gz
       sudo mkdir rootfs/TP_POSTGIS
       gp sync-done init
