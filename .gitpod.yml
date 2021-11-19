@@ -12,8 +12,8 @@ tasks:
       sudo mount -t devpts /dev/pts rootfs/dev/pts
     command : sudo chroot rootfs /bin/bash -c "su - -c /root/start.sh"
 
-  ports :
-    - port: 8080
-      onOpen: open-browser
-    - port: 6080
-      onOpen: open-browser
+ports :
+  - port: 8080
+    onOpen: open-browser
+  - port: 6080
+    onOpen: open-browser
